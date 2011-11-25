@@ -7,7 +7,7 @@
 
 * Screenshots
 
-See =shot-0.png=.
+[[https://raw.github.com/Corsair/emacs-deviant-theme/master/shot-0.png]]
 
 * Installation
 
