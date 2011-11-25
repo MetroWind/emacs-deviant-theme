@@ -1,0 +1,22 @@
+* Deviant theme for Emacs 24
+
+  Inspired by the color scheme previously used (the 2nd version?) by
+  [[http://www.deviantart.com/][deviantart.com]].  Now they changed the theme to a much brighter one.
+  This theme is for GNU Emacs version 24, in which theming is
+  officially supported.
+
+* Screenshots
+
+See =shot-0.png=.
+
+* Installation
+
+Copy =Deviant-theme.el= to somewhere in your Emacs =load-path=.  Then
+either =M-x load-theme<RET>Deviant= or =(load-theme 'Deviant t)=.
+
+* Some Remarks
+
+There is a [[http://debbugs.gnu.org/cgi/bugreport.cgi?bug%3D8402][bug]] in Emacs under Mac OS X.  A color specification in hex
+(e.g. =#2e3735=) is rendered in generic-RGB color space in stead of
+the correct sRGB.  Therefore a set of colors compensated for that is
+used in this theme if the OS is Mac OS X.
