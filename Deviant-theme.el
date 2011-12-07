@@ -1,3 +1,4 @@
+;; -*- eval: (rainbow-mode); -*-
 ;;; Deviant-theme.el --- Custom face theme for Emacs
 
 ;; Copyright (C) 2010 Darksair.
@@ -36,10 +37,10 @@
 ;; Colors, in (sRGB GenericRGB)
 (defvar dv-default-bg '("#2e3735" "#232a28"))
 (defvar dv-default-fg '("#b6beb4" "#a8b1a4"))
-(defvar dv-cursor-bg '("#afc81c" "#a4c100"))
+(defvar dv-cursor-bg '("#c73a7c" "#b0256c"))
 (defvar dv-cursor-fg dv-default-bg)
-(defvar dv-region-bg dv-cursor-bg)
-(defvar dv-region-fg dv-cursor-fg)
+(defvar dv-region-bg '("#afc81c" "#a0c116"))
+(defvar dv-region-fg dv-default-bg)
 (defvar dv-modeline-bg '("#3e4745" "#303735"))
 (defvar dv-modeline-fg dv-default-fg)
 (defvar dv-modeline-inact-bg dv-default-bg)
