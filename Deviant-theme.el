@@ -97,6 +97,35 @@
  `(header-line ((t (:background ,(dv-color dv-header-bg)
                     :foreground ,(dv-color dv-header-fg))))))
 
+;; Rainbow delimiters
+(defun rainbow-delim-set-face ()
+  (set-face-attribute
+   'rainbow-delimiters-depth-1-face nil
+   :foreground (dv-color dv-default-fg))
+  (set-face-attribute
+   'rainbow-delimiters-depth-2-face nil
+   :foreground (dv-color dv-builtin-fg))
+  (set-face-attribute
+   'rainbow-delimiters-depth-3-face nil
+   :foreground (dv-color dv-keyword-fg))
+  (set-face-attribute
+   'rainbow-delimiters-depth-4-face nil
+   :foreground (dv-color dv-string-fg))
+  (set-face-attribute
+   'rainbow-delimiters-depth-5-face nil
+   :foreground (dv-color dv-region-bg))
+  (set-face-attribute
+   'rainbow-delimiters-depth-6-face nil
+   :foreground (dv-color dv-link-fg))
+  (set-face-attribute
+   'rainbow-delimiters-depth-7-face nil
+   :foreground (dv-color dv-comment-fg))
+  (set-face-attribute
+   'rainbow-delimiters-unmatched-face nil
+   :foreground (dv-color dv-warn-fg)))
+
+(eval-after-load "rainbow-delimiters" '(rainbow-delim-set-face))
+
 (provide-theme 'Deviant)
 
 ;; Local Variables:
