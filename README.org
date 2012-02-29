@@ -17,6 +17,6 @@ either =M-x load-theme<RET>Deviant= or =(load-theme 'Deviant t)=.
 * Some Remarks
 
 There is a [[http://debbugs.gnu.org/cgi/bugreport.cgi?bug%3D8402][bug]] in Emacs under Mac OS X.  A color specification in hex
-(e.g. =#2e3735=) is rendered in generic-RGB color space in stead of
-the correct sRGB.  Therefore a set of colors compensated for that is
-used in this theme if the OS is Mac OS X.
+(e.g. =#2e3735=) is rendered in generic-RGB color space instead of the
+correct sRGB.  Therefore a set of colors compensated for that is used
+in this theme if the OS is Mac OS X.
