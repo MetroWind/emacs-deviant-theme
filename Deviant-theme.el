@@ -98,7 +98,7 @@
                     :foreground ,(dv-color dv-header-fg))))))
 
 ;; Rainbow delimiters
-(defun rainbow-delim-set-face ()
+(defun dv-rainbow-delim-set-face ()
   (set-face-attribute
    'rainbow-delimiters-depth-1-face nil
    :foreground (dv-color dv-default-fg))
@@ -124,7 +124,48 @@
    'rainbow-delimiters-unmatched-face nil
    :foreground (dv-color dv-warn-fg)))
 
-(eval-after-load "rainbow-delimiters" '(rainbow-delim-set-face))
+;; Moinmoin mode
+(defun dv-moinmoin-set-face ()
+  (set-face-attribute
+   'moinmoin-wiki-link nil
+   :foreground (dv-color dv-link-fg)
+   :weight 'normal)
+  (set-face-attribute
+   'moinmoin-url nil
+   :foreground (dv-color dv-link-fg)
+   :height 1)
+  (set-face-attribute
+   'moinmoin-url-title nil
+   :foreground (dv-color dv-link-fg))
+  (set-face-attribute
+   'moinmoin-h4 nil
+   :foreground (dv-color dv-region-bg))
+  (set-face-attribute
+   'moinmoin-item nil
+   :foreground (dv-color dv-builtin-fg)
+   :weight 'normal)
+  (set-face-attribute
+   'moinmoin-tt nil
+   :foreground (dv-color dv-string-fg))
+  (set-face-attribute
+   'moinmoin-code-braces nil
+   :foreground (dv-color dv-default-fg))
+  (set-face-attribute
+   'moinmoin-code nil
+   :foreground (dv-color dv-string-fg))
+  (set-face-attribute
+   'moinmoin-rule nil
+   :foreground (dv-color dv-builtin-fg)
+   :weight 'normal)
+  (set-face-attribute
+   'moinmoin-blockquote-text nil
+   :foreground (dv-color dv-default-fg))
+  (set-face-attribute
+   'moinmoin-blockquote-indent nil
+   :background (dv-color dv-default-bg)))
+
+(eval-after-load "rainbow-delimiters" '(dv-rainbow-delim-set-face))
+(eval-after-load "moinmoin-mode" '(dv-moinmoin-set-face))
 
 (provide-theme 'Deviant)
 
