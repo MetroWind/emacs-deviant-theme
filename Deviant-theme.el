@@ -1,7 +1,7 @@
 ;; -*- eval: (rainbow-mode); -*-
 ;;; Deviant-theme.el --- Custom face theme for Emacs
 
-;; Copyright (C) 2010 Darksair.
+;; Copyright (C) 2010, 2011, 2012 Darksair.
 
 ;; This file is free software: you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -163,6 +163,16 @@
   (set-face-attribute
    'moinmoin-blockquote-indent nil
    :background (dv-color dv-default-bg)))
+
+;; CUA
+(defun dv-cua-set-face ()
+  (set-face-attribute
+   'cua-rectangle nil
+   :foreground (dv-color dv-region-fg)
+   :background (dv-color dv-region-bg)))
+(if cua-mode
+    (dv-cua-set-face)
+  (add-hook 'cua-mode-hook 'dv-cua-set-face))
 
 (eval-after-load "rainbow-delimiters" '(dv-rainbow-delim-set-face))
 (eval-after-load "moinmoin-mode" '(dv-moinmoin-set-face))
