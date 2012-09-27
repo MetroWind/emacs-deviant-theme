@@ -14,9 +14,17 @@
 Copy =Deviant-theme.el= to somewhere in your Emacs =load-path=.  Then
 either =M-x load-theme<RET>Deviant= or =(load-theme 'Deviant t)=.
 
+If you are using Emacs in Mac, and your Emacs is not patched for the
+sRGB bug (see the remarks section), you need to set `dv-macp' to `t'
+in order to have the correct color.
+
 * Some Remarks
 
 There is a [[http://debbugs.gnu.org/cgi/bugreport.cgi?bug%3D8402][bug]] in Emacs under Mac OS X.  A color specification in hex
 (e.g. =#2e3735=) is rendered in generic-RGB color space instead of the
 correct sRGB.  Therefore a set of colors compensated for that is used
 in this theme if the OS is Mac OS X.
+
+UPDATE: Now there are patches that deal with this color bug.  In
+Homebrew you can choose to apply that patch which is what I did.  So I
+now hard-code the theme to use sRGB colors.

@@ -18,7 +18,7 @@
 
 ;;; Code:
 
-(defconst dv-macp (eq system-type 'darwin) "Are we running in Mac OS?")
+(defconst dv-macp nil "Are we running in Mac OS?")
 
 (defun color-sRGB (color-tuple)
   (car color-tuple))
