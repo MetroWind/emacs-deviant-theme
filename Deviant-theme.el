@@ -174,8 +174,18 @@
     (dv-cua-set-face)
   (add-hook 'cua-mode-hook 'dv-cua-set-face))
 
+;; Powerline
+(defun dv-powerline-set-face ()
+  (set-face-attribute
+   'mode-line nil
+   :foreground (dv-color dv-default-bg)
+   :background (dv-color dv-region-bg)
+   :box nil))
+  ;; (setq powerline-color2 (dv-color dv-default-bg)))
+
 (eval-after-load "rainbow-delimiters" '(dv-rainbow-delim-set-face))
 (eval-after-load "moinmoin-mode" '(dv-moinmoin-set-face))
+(eval-after-load "powerline" '(dv-powerline-set-face))
 
 (provide-theme 'Deviant)
 
